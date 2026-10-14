@@ -2,7 +2,7 @@
 
 给 DSH（DeepSeek Harness）Web 界面加一个**可搜索的插件面板**，把已安装外部插件的英文描述显示成中文。
 
-`@local/dsh-plugin-hub` · v0.2.0 · Web 平台 · 9 个文件约 45 KB
+`@local/dsh-plugin-hub` · v0.2.0 · Web 平台 · 10 个文件约 46 KB
 
 ---
 
@@ -112,7 +112,6 @@ DSH 插件分为 Host（Node 侧）与 Client（浏览器侧）两半，本包�
 2. **中文词典 `ZH` 是手工维护的映射**，不会自动翻译新插件。Host 侧已预留 LLM 自动翻译 + 缓存的落点，但尚未实现。
 3. **`plugins.item` 通道走不通**，理由见上表。
 4. **反皮肤方案是「用力压过去」**：依赖 `z-index: 2147483647` 与 `!important`。若宿主将来调整插槽结构或皮肤改变策略，需要重新核对。
-5. **仓库暂无 LICENSE 文件**，未声明许可协议。
 
 ## 开发
 
@@ -158,8 +157,15 @@ node _test-data.mjs client.js
 | `icon.svg` | 侧栏图标 |
 | `_test-data.mjs` | 纯数据自测脚本 |
 | `README.md` | 本文件 |
+| `LICENSE` | MIT 许可证 |
 
 ## 版本
 
 - **0.2.0** —— Client 侧从函数组件改为 class 组件（绕开 Invalid hook call）；新增 `settings.section` 通道；新增反皮肤隔离层；修正 `normalize()` 字段链导致列表为 0 的 bug。
 - **0.1.0** —— 初始版本：侧栏面板 + 中文词典 + 内置快照。
+
+## 许可
+
+[MIT](LICENSE) © 2026 OASCW
+
+可自由使用、修改、分发与商用，唯一要求是保留版权声明与许可证全文。
