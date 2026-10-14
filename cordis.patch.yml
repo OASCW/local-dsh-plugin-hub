@@ -1,0 +1,12 @@
+# 插件中心（Plugin Hub）—— DSH 插件包
+#
+# 一个 insert 行：把本包作为插件插进当前 profile。
+# Host 入口是 index.js（当前仅占位，第二阶段在这里做 LLM 自动翻译 + 落盘缓存）；
+# 真正的界面在 client.js 里，注册到 main / sidebar.panellist / settings.section
+# 三个插槽（另有一次 plugins.item 的不成功尝试，代码里留作记录）。
+#
+# config 是可选的：本插件目前没有配置项，所以整个省掉。
+# （官方 loader 的 insert 条目只要求 id + name。）
+- insert:
+    - id: plugin-hub
+      name: '@local/dsh-plugin-hub'

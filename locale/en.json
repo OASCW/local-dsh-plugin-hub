@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Plugin Hub",
+    "description": "Search installed external plugins and show their English descriptions in Chinese."
+  },
+  "panel": "Plugin Hub"
+}

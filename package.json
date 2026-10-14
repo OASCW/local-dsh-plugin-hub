@@ -1,0 +1,38 @@
+{
+    "name":  "@local/dsh-plugin-hub",
+    "version":  "0.2.0",
+    "private":  true,
+    "type":  "module",
+    "description":  "插件中心：在侧栏提供一个可搜索的插件面板，把外来插件的英文描述显示成中文。",
+    "exports":  {
+                    ".":  "./index.js",
+                    "./client":  "./client.js",
+                    "./package.json":  "./package.json",
+                    "./locale/*.json":  "./locale/*.json"
+                },
+    "files":  [
+                  "index.js",
+                  "client.js",
+                  "cordis.patch.yml",
+                  "icon.svg",
+                  "locale/*.json",
+                  "_test-data.mjs"
+              ],
+    "icon":  "./icon.svg",
+    "meta":  {
+                 "title":  "插件中心",
+                 "description":  "搜索已安装的外部插件，并把英文描述显示成中文。"
+             },
+    "dsh":  {
+                "bundle":  {
+                               "patch":  "./cordis.patch.yml"
+                           },
+                "client":  {
+                               "platform":  "web",
+                               "immediately":  true,
+                               "inject":  [
+
+                                          ]
+                           }
+            }
+}
